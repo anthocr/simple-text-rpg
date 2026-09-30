@@ -10,6 +10,11 @@ Run the container:
 docker run -v "$(pwd)":/usr/src -it cpp-container
 ```
 
+The container builds in `/tmp/text-rpg-build`, outside the mounted project.
+This prevents a host-created `build/CMakeCache.txt` from being reused with
+container paths. Set `BUILD_DIR` to use a different container-local build
+directory if needed.
+
 Run the application interactively in a shell:
 
 ```bash
