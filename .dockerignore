@@ -1,0 +1,8 @@
+# Build outputs are specific to the machine that created them. CMake caches
+# absolute paths, so copying them into an image makes the cache invalid.
+build/
+CMakeCache.txt
+CMakeFiles/
+
+# Repository metadata is not needed to build or run the application.
+.git/
